@@ -20,24 +20,7 @@ DuitNow QR and FPX are **prototypes**: no real payment is made.
 
 ## Install on a new laptop (Windows)
 
-### 1. Install the tools
-
-- [Git](https://git-scm.com/download/win)
-- [Flutter](https://docs.flutter.dev/install) **3.47.5 or newer**. Extract it to `C:\flutter` and add `C:\flutter\bin` to PATH.
-- [Android Studio](https://developer.android.com/studio). Open it once and finish the setup wizard, then in
-  **SDK Manager → SDK Tools** tick **Android SDK Command-line Tools (latest)** and click **Apply**.
-- [VS Code](https://code.visualstudio.com) with the **Flutter** extension
-
-Open a new PowerShell window, accept the licences, then check the setup:
-
-```powershell
-flutter doctor --android-licenses
-flutter doctor
-```
-
-**Flutter** and **Android toolchain** must have a tick. A *Visual Studio* warning can be ignored.
-
-### 2. Download the project
+### 1. Download the project
 
 The repository is private, so ask the owner to add you as a collaborator first.
 
@@ -47,7 +30,7 @@ cd boss-botak
 flutter pub get
 ```
 
-### 3. Add the Supabase keys
+### 2. Add the Supabase keys
 
 ```powershell
 Copy-Item env\env.example.json env\env.json
@@ -60,7 +43,7 @@ Open `env\env.json` and fill in both values (ask a teammate, or see **Supabase �
 
 Never use the secret or `service_role` key, and never commit this file.
 
-### 4. Run the app
+### 3. Run the app
 
 1. Start an emulator (Android Studio → **Device Manager**) or plug in a phone with USB debugging on.
 2. Open the folder in VS Code, press **Ctrl+Shift+D**, choose **Boss Botak (Supabase cloud)** and press **F5**.
@@ -79,7 +62,7 @@ Without the keys, `flutter run` starts **Demo mode** with sample data on the dev
 |---|---|
 | `flutter is not recognized` | Add `C:\flutter\bin` to PATH and open a new terminal |
 | `version solving failed` | `flutter upgrade` |
-| Cannot find the `--dart-define-from-file` file | Create `env/env.json` (step 3) |
+| Cannot find the `--dart-define-from-file` file | Create `env/env.json` (step 2) |
 | `Repository not found` | Ask to be added as a collaborator |
 | Strange build errors | `flutter clean`, then `flutter pub get` |
 
