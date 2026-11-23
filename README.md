@@ -46,15 +46,13 @@ Never use the secret or `service_role` key, and never commit this file.
 ### 3. Run the app
 
 1. Start an emulator (Android Studio → **Device Manager**) or plug in a phone with USB debugging on.
-2. Open the folder in VS Code, press **Ctrl+Shift+D**, choose **Boss Botak (Supabase cloud)** and press **F5**.
-
-Or from the terminal:
+2. Open the folder in VS Code and run this in its terminal (**Ctrl + `**):
 
 ```powershell
 flutter run --dart-define-from-file=env/env.json
 ```
 
-Without the keys, `flutter run` starts **Demo mode** with sample data on the device.
+Plain `flutter run` (or **F5**) starts **Demo mode** with sample data on the device.
 
 ### Common problems
 
